@@ -76,10 +76,12 @@ module.exports = class ProxyRequest extends HTTP.IncomingMessage {
     this.trailers = trailers;
   }
 
+  /*
   setTimeout(timeout, callback) {
     if (callback)
       setImmediate(callback);
   }
+  */
 
   setNoDelay(/*nodelay = true*/) {
   }
@@ -171,10 +173,12 @@ class ProxyResponse extends Stream.Readable {
       this.push(null);
   }
 
+  /*
   setTimeout(msec, callback) {
     if (callback)
       setImmediate(callback);
   }
+  */
 
   static notFound(url) {
     return new ProxyResponse({
